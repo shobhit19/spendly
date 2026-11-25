@@ -1,0 +1,197 @@
+/* ------------------------------------------------------------------ */
+/* Landing page — hero section                                         */
+/* Loaded after style.css via the head block in landing.html           */
+/* ------------------------------------------------------------------ */
+
+.lp-hero {
+    --lp-green: #4a9a78;
+    --lp-green-dark: #2f7a58;
+    --lp-green-bg: #e6f4ee;
+    --lp-green-border: #c3e4d3;
+    --lp-red: #d0453b;
+
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 4.5rem 2rem 5rem;
+    text-align: center;
+}
+
+/* Badge */
+
+.lp-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    background: var(--lp-green-bg);
+    border: 1px solid var(--lp-green-border);
+    color: var(--lp-green-dark);
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 0.5rem 1.5rem;
+    border-radius: 999px;
+    margin-bottom: 2.25rem;
+}
+
+.lp-badge-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--lp-green);
+}
+
+/* Heading + subtitle */
+
+.lp-title {
+    font-family: var(--font-body);
+    font-size: clamp(2.5rem, 6vw, 4.25rem);
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+    color: var(--ink);
+    margin-bottom: 1.75rem;
+}
+
+.lp-title span {
+    display: block;
+    color: var(--lp-green);
+}
+
+.lp-subtitle {
+    font-size: 1.35rem;
+    line-height: 1.65;
+    color: var(--ink-muted);
+    max-width: 720px;
+    margin: 0 auto 2.75rem;
+}
+
+/* Buttons */
+
+.lp-actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    margin-bottom: 4.5rem;
+}
+
+.lp-btn {
+    display: inline-block;
+    background: var(--ink);
+    color: #fff;
+    font-size: 1.15rem;
+    font-weight: 500;
+    padding: 1.1rem 2.4rem;
+    border-radius: 14px;
+    transition: background 0.2s;
+}
+
+.lp-btn:hover { background: var(--accent); }
+
+/* Dashboard preview */
+
+.lp-preview {
+    background: var(--paper);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: 1.5rem 1.75rem 1.75rem;
+    text-align: left;
+}
+
+.lp-dots {
+    display: flex;
+    gap: 0.6rem;
+    margin-bottom: 1.5rem;
+}
+
+.lp-dots span {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+}
+
+.lp-dots span:nth-child(1) { background: #e39a9a; }
+.lp-dots span:nth-child(2) { background: #f0c779; }
+.lp-dots span:nth-child(3) { background: #a9dfc9; }
+
+.lp-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.lp-stat,
+.lp-breakdown {
+    background: var(--paper-card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+}
+
+.lp-stat { padding: 1.4rem 1.6rem; }
+
+.lp-stat-label {
+    font-size: 1rem;
+    color: var(--ink-faint);
+    margin-bottom: 0.5rem;
+}
+
+.lp-stat-value {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--ink);
+    margin-bottom: 0.4rem;
+}
+
+.lp-stat-note {
+    font-size: 1rem;
+    color: var(--ink-faint);
+}
+
+.lp-stat-note.is-up { color: var(--lp-red); }
+.lp-stat-note.is-good { color: var(--lp-green); }
+
+.lp-breakdown {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    padding: 1.5rem 1.75rem;
+}
+
+.lp-bar-row {
+    display: grid;
+    grid-template-columns: 76px 1fr;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.lp-bar-label {
+    font-size: 1.1rem;
+    color: var(--ink-soft);
+    text-align: right;
+}
+
+.lp-bar-track {
+    height: 12px;
+    background: var(--border-soft);
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.lp-bar {
+    height: 100%;
+    border-radius: 999px;
+}
+
+.lp-bar.is-food   { background: #e5a443; }
+.lp-bar.is-travel { background: #4a86d6; }
+.lp-bar.is-bills  { background: #7b6fd0; }
+
+/* Responsive */
+
+@media (max-width: 800px) {
+    .lp-hero { padding: 3rem 1.25rem 3.5rem; }
+    .lp-subtitle { font-size: 1.1rem; }
+    .lp-stats { grid-template-columns: 1fr; }
+    .lp-btn { font-size: 1rem; padding: 0.95rem 1.8rem; }
+}
